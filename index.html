@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="hearts"></canvas>
+
+<!-- INTRO -->
+<div id="intro" class="screen active">
+  <div class="intro-content">
+    <p class="intro-title">
+      A special message for <span class="love-word">My Love</span>
+    </p>
+    <p class="intro-quote">
+      Every love story is beautiful, but ours is my favorite
+    </p>
+
+    <button id="openBtn">Open Your Letter 💌</button>
+    <p class="with-love">with love</p>
+  </div>
+</div>
+
+<div id="content">
+
+  <!-- LETTER -->
+    <section class="screen fade">
+    <div class="card">
+      <h1>My Love ❤️</h1>
+      <p id="letterText" class="handwriting"></p>
+      <div id="signature" class="signature"></div>
+    </div>
+  </section>
+
+  <!-- PHOTOS -->
+  <section class="section fade fast-fade">
+    <h2>Our Memories</h2>
+    <p class="subtitle">
+      Every picture tells a story of us, of love, of beautiful moments we have shared.
+    </p>
+
+    <div class="gallery">
+      <img src="images/img1.jpg.jfif" class="memory-img" onclick="openImage(this)">
+      <img src="images/imgb.jpg.jfif" class="memory-img" onclick="openImage(this)">
+      <img src="images/imgc.jpg.jfif" class="memory-img" onclick="openImage(this)">
+      <img src="images/imgd.jpg.jfif" class="memory-img" onclick="openImage(this)">
+      <img src="images/imge.jpg.jfif" class="memory-img" onclick="openImage(this)">
+      <img src="images/imgf.jpg.jfif" class="memory-img" onclick="openImage(this)">
+    </div>
+  </section>
+
+  <!-- MUSIC -->
+  <section class="section music-section fade">
+    <h2>Our Songs</h2>
+    <p class="subtitle">
+      The melodies that remind me of you, of us, of our beautiful journey.
+    </p>
+
+    <div class="songs">
+      <div class="song">
+        <button onclick="toggleSong(0)">▶ Play Song 1</button>
+        <audio src="music/neela_shalabame_ring.mp3"></audio>
+      </div>
+
+      <div class="song">
+        <button onclick="toggleSong(1)">▶ Play Song 2</button>
+        <audio src="music/lailakame_love.mp3"></audio>
+      </div>
+
+      <div class="song">
+        <button onclick="toggleSong(2)">▶ Play Song 3</button>
+        <audio src="music/Ninnil-Aliyan-Mathram-Tamil-South-Indian.mp3"></audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL (NO BACKGROUND) -->
+  <section class="section footer fade">
+    <h2 class="final-title">Forever and always</h2>
+    <p>Made with love, for the one who has my heart.</p>
+    <p class="valentine">Happy Valentine’s Day ❤️</p>
+  </section>
+
+</div>
+
+<!-- IMAGE MODAL -->
+<div id="modal">
+  <img id="modalImg">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
