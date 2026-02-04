@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle, #ffafbd, #ffc3a0);
+  overflow-x: hidden;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hearts */
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Screens */
+.screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#intro {
+  position: fixed;
+  inset: 0;
+}
+
+.intro-content {
+  text-align: center;
+}
+
+.intro-title {
+  font-size: 22px;
+}
+
+.love-word {
+  color: #e91e63;
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+}
+
+.intro-quote {
+  margin: 15px 0 30px;
+  font-size: 18px;
+}
+
+#openBtn {
+  padding: 18px 36px;
+  font-size: 22px;
+  border-radius: 40px;
+  border: none;
+  background: #e91e63;
+  color: white;
+  cursor: pointer;
+}
+
+.with-love {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Content */
+#content {
+  display: none;
+  position: relative;
+  z-index: 1;
+}
+
+/* Letter */
+.card {
+  background: rgba(255,255,255,0.95);
+  padding: 30px;
+  max-width: 420px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.handwriting {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.signature {
+  margin-top: 30px;
+  text-align: right;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.subtitle {
+  max-width: 500px;
+  margin: 15px auto 40px;
+}
+
+/* Gallery (small images) */
+.gallery {
+  max-width: 260px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.memory-img {
+  width: 220px;              /* already smaller size */
+  margin: 20px auto;
+  display: block;
+  border-radius: 14px;
+  cursor: pointer;
+
+  /* smooth hover animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.memory-img:hover {
+  transform: scale(1.08);   /* little bigger on hover */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Modal */
+#modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* MUSIC SECTION WITH IMAGE BACKGROUND */
+.music-section {
+  background: url("images/music-bg.jpg") center/cover no-repeat;
+  color: white;
+  position: relative;
+}
+
+.music-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.music-section * {
+  position: relative;
+}
+
+/* Songs */
+.songs {
+  max-width: 400px;
+  margin: auto;
+}
+
+.song {
+  margin-bottom: 20px;
+}
+
+.song button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: #e91e63;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Footer */
+.final-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  color: #e91e63;
+}
+
+.valentine {
+  font-size: 20px;
+  color: #e91e63;
+  margin-top: 10px;
+}
+
+/* Fade-in on scroll */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Faster fade for photo section */
+.fast-fade {
+  transition: all 0.4s ease;
+}
